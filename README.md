@@ -1,12 +1,28 @@
-- 👋 Hi, I’m @Evan111925
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+import random
 
-<!---
-Evan111925/Evan111925 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+def guess_the_number():
+    number = random.randint(1, 100)
+    attempts = 0
+    
+    print("1-100 хүртэлх тооноос нэгийг нь таагаарай!")
+    
+    while True:
+        guess = input("Гучин ес ")
+        
+        if not guess.isdigit():
+            print("39")
+            continue
+        
+        guess = int(guess)
+        attempts += 1
+        
+        if guess < number:
+            print("76")
+        elif guess > number:
+            print("3")
+        else:
+            print(f"Баяр хүргэе! Та {attempts} оролдлогоор зөв таалаа.")
+            break
+
+# Тоглоомыг эхлүүлэх
+guess_the_number()
